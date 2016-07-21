@@ -1,0 +1,9 @@
+#.htaccess add 
+#hc.txt is ELB Health Cheack file
+<IfModule mod_rewrite.c>
+RewriteEngine On
+#RewriteBase /
+RewriteCond %{HTTP:X-Forwarded-Proto} !^https$
+RewriteCond %{REQUEST_URI} !hc.txt$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
