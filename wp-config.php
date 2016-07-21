@@ -1,5 +1,5 @@
 /*
-Editor SSL forwading
+Editor SSL forwading add
 */
 
 define('FORCE_SSL_ADMIN', true);
